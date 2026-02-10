@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: DM Sans, sans-serif !important;
+}
+
+@layer base {
+  :root[data-theme="light"] {
+    --color-bg: #FFFFFF;
+    --color-text: #111111;
+    --color-muted: #666666;
+    --color-border: #E5E7EB;
+    --color-accent: #2563EB;
+    --color-sidebar: #F9FAFB;
+  }
+
+  :root[data-theme="dark"] {
+    --color-bg: #121212;
+    --color-text: #FFFFFF;
+    --color-muted: #A3A3A3;
+    --color-border: #333333;
+    --color-accent: #3B82F6;
+    --color-sidebar: #1E1E1E;
+  }
+
+  :root[data-theme="midnight"] {
+    --color-bg: #0F172A; /* Slate 900 */
+    --color-text: #F1F5F9; /* Slate 100 */
+    --color-muted: #94A3B8; /* Slate 400 */
+    --color-border: #1E293B; /* Slate 800 */
+    --color-accent: #06B6D4; /* Cyan 500 */
+    --color-sidebar: #1E293B; /* Slate 800 */
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
+}
